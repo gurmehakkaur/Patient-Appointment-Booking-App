@@ -1,29 +1,8 @@
-/*/////////////////////////////////////////////////////////////////////////
-                        Assignment 1 - Milestone 3
-Full Name  : Gurmehak Kaur Uppal
-Student ID#: 145885232
-Email      : gkuppal4@myseneca.ca
-Section    : ZEE
 
-Authenticity Declaration:
-I declare this submission is the result of my own work and has not been
-shared with any other student or 3rd party content provider. This submitted
-piece of work is entirely of my own creation.
-/////////////////////////////////////////////////////////////////////////*/
-
-// SAFE-GUARD: 
-// It is good practice to apply safe-guards to header files
-// Safe-guard's ensures only 1 copy of the header file is used in the project build
-// The macro name should be mirroring the file name with _ for spaces, dots, etc.
 #ifndef CLINIC_H
 #define CLINIC_H
 
-//////////////////////////////////////
-// Module macro's (usable by any file that includes this header)
-//////////////////////////////////////
 
-// Display formatting options (Provided to student)
-// !!! DO NOT MODIFY THESE MACRO'S !!!
 #define FMT_FORM 1
 #define FMT_TABLE 2
 
@@ -57,7 +36,6 @@ struct Patient {
     struct Phone phone;
 };
 
-// ------------------- MS#3 -------------------
 
 // Data type: Time
 // ToDo:
@@ -79,8 +57,7 @@ struct Appointment {
     struct Time time;
 };
 
-// ClinicData type: Provided to student
-// !!! DO NOT MODIFY THIS DATA TYPE !!!
+
 struct ClinicData
 {
     struct Patient* patients;
@@ -141,10 +118,6 @@ void editPatient(struct Patient patient[], int max);
 // Remove a patient record from the patient array
 void removePatient(struct Patient patient[], int max);
 
-
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// Milestone #3 mandatory functions...
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // View ALL scheduled appointments
 // Todo:

@@ -1,16 +1,3 @@
-/*/////////////////////////////////////////////////////////////////////////
-                        Assignment 1 - Milestone 3
-Full Name  : Gurmehak Kaur Uppal
-Student ID#: 145885232
-Email      : gkuppal4@myseneca.ca
-Section    : ZEE
-
-Authenticity Declaration:
-I declare this submission is the result of my own work and has not been
-shared with any other student or 3rd party content provider. This submitted
-piece of work is entirely of my own creation.
-/////////////////////////////////////////////////////////////////////////*/
-
 #define _CRT_SECURE_NO_WARNINGS
 
 // System Libraries
@@ -18,10 +5,10 @@ piece of work is entirely of my own creation.
 #include <string.h>
 #include <stdlib.h>
 
-// User Defined Libraries
-// Milestone 1 Functions
+
+
 #include "core.h"
-// Milestone 2 Functions
+
 #include "clinic.h"
 
 void sort(struct Appointment appoints[], int max) {
@@ -55,7 +42,6 @@ void sort(struct Appointment appoints[], int max) {
 // DISPLAY FUNCTIONS
 //////////////////////////////////////
 
-// !!! DO NOT MODIFY THIS FUNCTION DEFINITION !!!
 // Display's the patient table header (table format)
 void displayPatientTableHeader(void)
 {
@@ -63,7 +49,7 @@ void displayPatientTableHeader(void)
            "----- --------------- --------------------\n");
 }
 
-// !!! DO NOT MODIFY THIS FUNCTION DEFINITION !!!
+
 // Displays a single patient record in FMT_FORM | FMT_TABLE format
 void displayPatientData(const struct Patient* patient, int fmt)
 {
@@ -84,7 +70,7 @@ void displayPatientData(const struct Patient* patient, int fmt)
     }
 }
 
-// !!! DO NOT MODIFY THIS FUNCTION DEFINITION !!!
+
 // Display's appointment schedule headers (date-specific or all records)
 void displayScheduleTableHeader(const struct Date* date, int isAllRecords)
 {
@@ -104,7 +90,7 @@ void displayScheduleTableHeader(const struct Date* date, int isAllRecords)
     }
 }
 
-// !!! DO NOT MODIFY THIS FUNCTION DEFINITION !!!
+
 // Display a single appointment record with patient info. in tabular format
 void displayScheduleData(const struct Patient* patient,
                          const struct Appointment* appoint,
@@ -128,7 +114,6 @@ void displayScheduleData(const struct Patient* patient,
 // MENU & ITEM SELECTION FUNCTIONS
 //////////////////////////////////////
 
-// !!! DO NOT MODIFY THIS FUNCTION DEFINITION !!!
 // main menu
 void menuMain(struct ClinicData* data)
 {
@@ -166,7 +151,6 @@ void menuMain(struct ClinicData* data)
     } while (selection);
 }
 
-// !!! DO NOT MODIFY THIS FUNCTION DEFINITION !!!
 // Menu: Patient Management
 void menuPatient(struct Patient patient[], int max)
 {
@@ -210,7 +194,6 @@ void menuPatient(struct Patient patient[], int max)
     } while (selection);
 }
 
-// !!! DO NOT MODIFY THIS FUNCTION DEFINITION !!!
 // Menu: Patient edit
 void menuPatientEdit(struct Patient* patient)
 {
@@ -249,7 +232,7 @@ void menuPatientEdit(struct Patient* patient)
 }
 
 
-// !!! DO NOT MODIFY THIS FUNCTION DEFINITION !!!
+
 // Menu: Appointment Management
 void menuAppointment(struct ClinicData* data)
 {
@@ -293,15 +276,10 @@ void menuAppointment(struct ClinicData* data)
 }
 
 
-// ---------------------------------------------------------------------------
-// !!! INSERT/COPY YOUR MS#2 FUNCTION DEFINITIONS BELOW... !!!
-// Note: Maintain the same order/sequence as it is listed in the header file
-//       Properly organize/categorize any new functions accordingly
-// ---------------------------------------------------------------------------
 
 
 // Display's all patient data in the FMT_FORM | FMT_TABLE format
-// (Copy your code from MS#2)
+
 void displayAllPatients(const struct Patient patient[], int max, int fmt) 
 {
     int i; 
@@ -358,7 +336,7 @@ void searchPatientData(const struct Patient patient[], int max)
 }
 
 // Add a new patient record to the patient array
-// (Copy your code from MS#2)
+
 void addPatient(struct Patient patient[], int max) 
 {
     int i; 
@@ -386,7 +364,7 @@ void addPatient(struct Patient patient[], int max)
 }
 
 // Edit a patient record from the patient array
-// (Copy your code from MS#2)
+
 void editPatient(struct Patient patient[], int max) 
 {
     int patientNum; 
@@ -413,7 +391,7 @@ void editPatient(struct Patient patient[], int max)
 }
 
 // Remove a patient record from the patient array
-// (Copy your code from MS#2)
+
 void removePatient(struct Patient patient[], int max) 
 {
     int patientNum; 
@@ -467,12 +445,10 @@ void removePatient(struct Patient patient[], int max)
 
 }
 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// Milestone #3 mandatory functions...
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
 // View ALL scheduled appointments
-// Todo:
+
 void viewAllAppointments(struct ClinicData* data) 
 {
     
@@ -500,7 +476,7 @@ void viewAllAppointments(struct ClinicData* data)
 }
 
 // View appointment schedule for the user input date
-// Todo:
+
 void viewAppointmentSchedule(struct ClinicData* data) 
 {
   
@@ -761,12 +737,9 @@ void removeAppointment(struct Appointment *app, int maxAppointments, struct Pati
 
 }
 
-//////////////////////////////////////
-// UTILITY FUNCTIONS
-//////////////////////////////////////
 
 // Search and display patient record by patient number (form)
-// (Copy your code from MS#2)
+
 void searchPatientByPatientNumber(const struct Patient patient[], int max) 
 {
    
@@ -800,7 +773,7 @@ void searchPatientByPatientNumber(const struct Patient patient[], int max)
 }
 
 // Search and display patient records by phone number (tabular)
-// (Copy your code from MS#2)
+
 void searchPatientByPhoneNumber(const struct Patient patient[], int max) 
 {
     
@@ -844,7 +817,7 @@ void searchPatientByPhoneNumber(const struct Patient patient[], int max)
 }
 
 // Get the next highest patient number
-// (Copy your code from MS#2)
+
 int nextPatientNumber(const struct Patient patient[], int max) 
 {
    
@@ -867,7 +840,7 @@ int nextPatientNumber(const struct Patient patient[], int max)
 }
 
 // Find the patient array index by patient number (returns -1 if not found)
-// (Copy your code from MS#2)
+
 int findPatientIndexByPatientNum(int patientNumber, const struct Patient patient[], int max) 
 {
     int i; 
@@ -945,7 +918,7 @@ int validAppointment(int patientNumber, struct Date date, struct Appointment *ap
 //////////////////////////////////////
 
 // Get user input for a new patient record
-// (Copy your code from MS#2)
+
 void inputPatient(struct Patient* patient) 
 {
     
@@ -962,7 +935,7 @@ void inputPatient(struct Patient* patient)
 }
 
 // Get user input for phone contact information
-// (Copy your code from MS#2)
+
 void inputPhoneData(struct Phone* phone) 
 {
    
@@ -1108,7 +1081,7 @@ void inputPhoneData(struct Phone* phone)
 //////////////////////////////////////
 
 // Import patient data from file into a Patient array (returns # of records read)
-/// ToDo:
+
 int importPatients(const char* datafile, struct Patient patients[], int max) 
 {
    
@@ -1142,7 +1115,7 @@ int importPatients(const char* datafile, struct Patient patients[], int max)
 }
 
 // Import appointment data from file into an Appointment array (returns # of records read)
-// ToDo:
+
 int importAppointments(const char* datafile, struct Appointment appoints[], int max) 
 {
   
