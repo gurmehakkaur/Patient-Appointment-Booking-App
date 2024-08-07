@@ -1,0 +1,6 @@
+﻿  a1ms3.c
+  clinic.c
+  core.c
+  Generating Code...
+D:\Seneca Sem1\IPC\ms3\core.c(178,24): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  ms3.vcxproj -> D:\Seneca Sem1\IPC\ms3\x64\Debug\ms3.exe
